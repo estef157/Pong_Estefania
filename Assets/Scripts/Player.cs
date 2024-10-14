@@ -23,5 +23,12 @@ public class Player : MonoBehaviour
         {
             transform.Translate(new Vector3(0, -1, 0) * velocidad * Time.deltaTime);
         }
+         //Clampear (limitar) un numero (la posicion)
+         float yLimitada =  Mathf.Clamp(transform.position.y, -3, 3);
+         transform.position = (new Vector3(transform.position.x, yLimitada, transform.position.z));
     }
+
+
+
+
 }
